@@ -4,9 +4,9 @@ import java.awt.*;
 public class Main extends JFrame {
     JTextArea result;
     JButton cal, reset;
-    JLabel name, age, sex;
+    JLabel name, age, sex,height,weight;
     JRadioButton male, female;
-    JTextField na, ag;
+    JTextField na, ag,he,we;
 
     Main() {
         setTitle("BMI Calculator");
@@ -52,13 +52,33 @@ public class Main extends JFrame {
         group.add(female);
         add(male);
         add(female);
+
+
+        height = new JLabel("Enter Your Height (mm):");
+        height.setBounds(100, 280, 150, 30);
+        add(height);
+
+        he=new JTextField(" ");
+        he.setBounds(300, 280, 200, 30);
+        add(he);
+
+
+         weight = new JLabel("Enter Your Weight (Kg):");
+        weight.setBounds(100, 340, 150, 30);
+        add(weight);
+
+        we=new JTextField(" ");
+        we.setBounds(300, 340, 200, 30);
+        add(we);
+
+
          
          cal = new JButton("Calculate");
-         cal.setBounds(250,300,100,30);
+         cal.setBounds(150 ,400,100,30);
          add(cal);
         
         reset = new JButton("Reset");
-         reset.setBounds(350,300,100,30);
+         reset.setBounds(250,400,100,30);
          add(reset);
          
          result = new JTextArea(" ");
